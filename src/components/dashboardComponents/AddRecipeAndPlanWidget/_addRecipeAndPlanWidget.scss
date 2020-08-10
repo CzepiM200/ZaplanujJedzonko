@@ -1,0 +1,31 @@
+@import '../../../scss/generic';
+.widgets {
+  display: flex;
+  justify-content: space-between;
+  width: 32%;
+  &__item {
+    @extend %box-border;
+    font-family: $action-font;
+    font-size: 1.25rem;
+    color: $success-color;
+    height: 232px;
+    width: 232px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    cursor: pointer;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.8rem;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../../scss/generic";
+.top-bar {
+  height: 80px;
+  width: 100%;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 2;
+}

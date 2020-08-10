@@ -1,0 +1,28 @@
+@import "../../../scss/generic";
+
+.author {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  background-color: $widgets-background;
+  width: 100%;
+  font-family: $primary-font;
+  padding: 5% 0;
+  &__img {
+    width: 35%;
+  }
+  &__text {
+    width: 55%;
+  }
+  &__header {
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.25rem;
+    padding-bottom: 15px;
+  }
+  &__item {
+    color: black;
+    font-size: 1.5rem;
+  }
+}

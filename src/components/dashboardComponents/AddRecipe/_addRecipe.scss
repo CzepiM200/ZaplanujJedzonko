@@ -1,0 +1,126 @@
+@import "../../../scss/generic";
+
+// body {
+//   overflow-y: hidden;
+// }
+
+.new-recipe {
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+  background-color: $widgets-background;
+  border: 1px dashed $secondary-color;
+  &__line {
+    border-top: 2px solid $secondary-color;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    max-height: 7%;
+
+    h1 {
+      color: $distinct-color;
+      text-transform: uppercase;
+    }
+  }
+  &__button {
+    align-self: flex-end;
+    height: 100%;
+    padding: 0.6em;
+    margin-bottom: 3px;
+    background-color: $distinct-color;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+  }
+  &__description {
+    margin: 1em 0 1.5em 0.4em;
+    & div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+      input {
+        width: 80%;
+      }
+      textarea {
+        width: 80%;
+        resize: none;
+      }
+    }
+
+    span {
+      display: block;
+      color: $menus-background;
+      font-size: 1.5em;
+      width: 15%;
+      min-width: fit-content;
+    }
+  }
+
+  &__formula {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-height: calc(100% - 17em);
+    margin-left: 0.4em;
+    & > div {
+      width: 49%;
+    }
+    div {
+      h2 {
+        color: $menus-background;
+        margin: 0.2em 0;
+        font-size: 1.75em;
+        text-transform: uppercase;
+      }
+      input,
+      textarea {
+        margin-right: 1%;
+        width: calc(100% - 2.5em);
+        resize: none;
+      }
+    }
+  }
+  &__new-recipe__instruction-list-container {
+    overflow-y: scroll;
+    max-height: calc(100% - 26em);
+  }
+  &__add-section {
+    display: flex;
+    margin: 1% 1%;
+  }
+  &__add-button {
+    align-self: flex-start;
+  }
+  &__add-icon {
+    width: 3em;
+    height: 3em;
+    svg {
+      path {
+        fill: $success-color;
+      }
+    }
+  }
+  &__instruction-list,
+  &__ingredients-list {
+    width: 100%;
+    height: calc(100% - 2em);
+    overflow-y: scroll;
+    margin: 2% 1%;
+    p {
+      color: rgb(70, 70, 70);
+      font-size: 16px;
+      margin: 0.3em 0;
+      svg:nth-child(1) {
+        path {
+          fill: $warning-color;
+        }
+      }
+      svg:nth-child(2) {
+        path {
+          fill: $shopIcon-color;
+        }
+      }
+    }
+  }
+}

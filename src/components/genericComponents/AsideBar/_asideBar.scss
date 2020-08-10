@@ -1,0 +1,63 @@
+@import "../../../scss/generic";
+.aside {
+  height: 100%;
+  width: 234px;
+  background-color: $menus-background;
+  &__item {
+    padding: 25px 0 25px 25px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+
+    span {
+      display: none;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      height: 0%;
+      width: 5px;
+      left: 0;
+      top: 0;
+      background-color: $distinct-color;
+      opacity: 0;
+      transition: $primary-transition ease-in-out;
+    }
+    &:hover::before {
+      opacity: 1;
+      height: 100%;
+    }
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 1.5rem;
+  }
+}
+
+// Handle active links style
+
+.aside__link.active {
+  font-weight: 600;
+  color: #fff;
+  & > .aside__item {
+    span {
+      display: inherit;
+      color: $distinct-color;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 5px;
+      left: 0;
+      top: 0;
+      background-color: $distinct-color;
+      opacity: 1;
+    }
+  }
+}

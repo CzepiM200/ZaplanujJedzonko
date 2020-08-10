@@ -1,0 +1,14 @@
+@import "../../../scss/generic";
+.logo {
+  font-family: $logo-font;
+  font-size: 1.8rem;
+  cursor: pointer;
+  &__first {
+    font-weight: 100;
+    color: white;
+  }
+  &__second {
+    font-weight: 700;
+    color: $distinct-color;
+  }
+}

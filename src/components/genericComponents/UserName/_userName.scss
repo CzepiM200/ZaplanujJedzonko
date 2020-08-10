@@ -1,0 +1,25 @@
+@import "../../../scss/generic";
+.user {
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  &__name {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: $primary-transition;
+    &:hover {
+      color: $distinct-color;
+    }
+  }
+  &__icon {
+    color: $distinct-color;
+    font-size: 2.4rem;
+    cursor: pointer;
+    transition: $primary-transition;
+    &:hover {
+      color: darken($distinct-color, 10%);
+    }
+  }
+}
